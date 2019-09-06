@@ -1,0 +1,20 @@
+agent:
+  type: any
+environment:
+  secret: secretVar
+  build_id: env.BUILD_ID
+build:
+  tool: docker
+  registry: myInternalRegistry.localhost:5000
+test:
+  tool: pyTest
+  file: junit.xml
+deploy:
+  endpoint: docker_registry
+build_condition:
+  always:
+    clean_workspace
+  failure:
+    report_to_github
+  success:
+    report_to_github
