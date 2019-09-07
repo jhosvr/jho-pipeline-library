@@ -22,6 +22,11 @@ class PipelineYaml implements Serializable {
 
 		def keys = config.keySet() as List
 		return keys
+		
+	}
+
+	def setEnv(envMap){
+		return True
 	}
 
 }

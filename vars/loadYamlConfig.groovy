@@ -9,6 +9,11 @@ def call(script, yamlFile, envVars, scmVars){
   stage('Initialize'){
     checkout scm
 
+    environment = sh "printenv"
+    print(environment.getClass())
+    print(environment.dump())
+    print(environment)
+    
     def config = readYaml(file: yamlFile)
     build = new PipelineYaml(this, config, envVars, scmVars)
 
