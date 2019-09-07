@@ -22,7 +22,7 @@ class YamlBuild implements Serializable {
 	def initializeBuild(){
 
 		for (key in config.keySet()){
-			script.print(each)
+			script.print(key)
 		}
 
 	}
