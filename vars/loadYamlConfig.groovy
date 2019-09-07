@@ -13,12 +13,13 @@ def call(script, yamlFile, envVars, scmVars){
     build = new PipelineYaml(this, config, envVars, scmVars)
 
     def options = build.initialize()
+    print(options.dump())
   }
 
   stage('Print stuff'){
     print(build.scmVars.dump())
     print(build.envVars.dump())
-    print(options.dump())
+    // print(options.dump()) -> Out of scope from stage('Initialize').options
   }
 
 }
