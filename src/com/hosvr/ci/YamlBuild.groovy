@@ -6,12 +6,9 @@ package com.hosvr.ci
 
 class YamlBuild implements Serializable {
 	def script
-	def envVars
-	def scmVars
-	def buildType
 
 	def YamlBuild(script) {
-		this.script = script
+		script = this.script
 	}
 
 	def start(){
