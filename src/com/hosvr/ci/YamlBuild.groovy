@@ -6,14 +6,15 @@ package com.hosvr.ci
 
 class YamlBuild implements Serializable {
 	def script
+	def config
 
-	def YamlBuild(script) {
-		script = this.script
+	def YamlBuild(script, config) {
+		this.script = script
+		this.config = config
 	}
 
 	def start(){
-		script.node {
-      echo "YamlBuild.start() called"
-		}
+    script.echo "YamlBuild.start() called"
 	}
+	
 }
