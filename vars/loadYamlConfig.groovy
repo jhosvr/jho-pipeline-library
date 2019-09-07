@@ -4,7 +4,7 @@
 
 import com.hosvr.ci.PipelineYaml
 
-def call(script, yamlFile){
+def call(script, yamlFile, scm){
 
   stage('Initialize'){
     checkout scm
