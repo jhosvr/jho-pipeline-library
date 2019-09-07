@@ -14,7 +14,9 @@ class YamlBuild implements Serializable {
 	}
 
 	def start(){
-    script.echo "YamlBuild.start() called"
+    for (directive in config){
+			print(directive)
+		}
 	}
-	
+
 }
