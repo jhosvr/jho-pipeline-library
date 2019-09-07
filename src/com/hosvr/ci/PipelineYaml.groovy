@@ -20,14 +20,8 @@ class PipelineYaml implements Serializable {
 
 	def initialize(){
 
-		for (key in config.keySet()){
-			script.print(key)
-		}
+		directives = key in config.keySet() as List
 
-		script.print({
-			scmVars.each({ print(it) })
-			envVars.each({ print(it) })
-		})
 	}
 
 }

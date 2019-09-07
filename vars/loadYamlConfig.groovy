@@ -16,7 +16,8 @@ def call(script, yamlFile, envVars, scmVars){
   }
 
   stage('Print stuff'){
-    env
+    print(build.scmVars)
+    print(build.envVars)
   }
 
 }
