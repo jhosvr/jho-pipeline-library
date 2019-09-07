@@ -15,7 +15,7 @@ class YamlBuild implements Serializable {
 
 	def start(){
     for (directive in config){
-			print(directive)
+			script.print(directive)
 		}
 	}
 
