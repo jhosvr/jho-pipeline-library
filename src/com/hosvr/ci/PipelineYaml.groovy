@@ -22,7 +22,7 @@ class PipelineYaml implements Serializable {
 			script.print(key)
 		}
 
-		script.env()
+		script.print(envVars)
 	}
 
 }
