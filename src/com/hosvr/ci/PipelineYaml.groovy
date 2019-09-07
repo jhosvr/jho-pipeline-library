@@ -20,7 +20,7 @@ class PipelineYaml implements Serializable {
 
 	def initialize(){
 
-		directives = key in config.keySet() as List
+		directives = config.keySet() as List
 
 	}
 
