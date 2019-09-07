@@ -8,11 +8,13 @@ class PipelineYaml implements Serializable {
 	def script
 	def config
 	def envVars
+	def scmVars
 
-	def PipelineYaml(script, config, envVars) {
+	def PipelineYaml(script, config, envVars, scmVars) {
 		this.script = script
 		this.config = config
 		this.envVars = envVars
+		this.scmVars = scmVars
 	}
 
 
@@ -22,6 +24,7 @@ class PipelineYaml implements Serializable {
 			script.print(key)
 		}
 
+		script.print(scmVars)
 		script.print(envVars)
 	}
 
