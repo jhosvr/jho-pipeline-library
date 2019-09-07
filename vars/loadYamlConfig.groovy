@@ -19,6 +19,7 @@ def call(script, yamlFile, envVars, scmVars){
   stage('Print stuff'){
     print(build.scmVars.dump())
     print(build.envVars.dump())
+    sh "env"
     // print(options.dump()) -> Out of scope from stage('Initialize').options
   }
 
