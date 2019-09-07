@@ -5,12 +5,12 @@
 import com.hosvr.ci.PipelineYaml
 
 def call(script, yamlFile){
-  checkout scm
+  script{
+    checkout scm
 
-  def config = readYaml(file: yamlFile)
+    def config = readYaml(file: yamlFile)
+    build = new PipelineYaml(this, config)
 
-  build = new PipelineYaml(this, config)
-
-  build.initializeBuild()
-
+    build.initialize()
+  }
 }
