@@ -7,5 +7,5 @@
 
 node {
   yamlFile = 'sample.yaml'
-  loadYamlConfig(this, yamlFile, scm)
+  loadYamlConfig(this, yamlFile)
 }

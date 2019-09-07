@@ -4,7 +4,7 @@
 
 import com.hosvr.ci.PipelineYaml
 
-def call(script, yamlFile, scm){
+def call(script, yamlFile){
 
   stage('Initialize'){
     checkout scm
@@ -12,7 +12,7 @@ def call(script, yamlFile, scm){
     envString = sh(script: "printenv", returnStdout: true,).trim()
 
     def config = readYaml(file: yamlFile)
-    build = new PipelineYaml(this, config, scm)
+    build = new PipelineYaml(this, config, this.scm)
 
     def options = build.initialize()
     print(options.dump())
