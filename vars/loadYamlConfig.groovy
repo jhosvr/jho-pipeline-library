@@ -4,27 +4,23 @@
 
 import com.hosvr.ci.PipelineYaml
 
-def call(script, yamlFile, envVars, scmVars){
+def call(script, yamlFile){
 
   stage('Initialize'){
     checkout scm
 
-    environment = sh(script: "printenv", returnStdout: true,).trim()
-    print(environment.getClass())
-    print(environment.dump())
-    print(environment)
-    
+    envString = sh(script: "printenv", returnStdout: true,).trim()
+
     def config = readYaml(file: yamlFile)
-    build = new PipelineYaml(this, config, envVars, scmVars)
+    build = new PipelineYaml(this, config)
 
     def options = build.initialize()
     print(options.dump())
   }
 
-  stage('Print stuff'){
-    print(build.scmVars.dump())
-    print(build.envVars.dump())
-    sh "env"
+  stage('Scm Vars'){
+    print("WITHIN THE SCM VARS STAGE")
+    print(scm.dump())
     // print(options.dump()) -> Out of scope from stage('Initialize').options
   }
 
