@@ -7,6 +7,7 @@ package com.hosvr.ci
 class PipelineYaml implements Serializable {
 	def script
 	def config
+	def scm
 
 	def PipelineYaml(script, config, scm) {
 		this.script = script
