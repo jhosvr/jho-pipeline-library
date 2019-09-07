@@ -5,6 +5,7 @@
 import com.hosvr.ci.*
 
 def call(String yamlFile){
+  checkout scm
   def pipeline = readYaml file: yamlFile
   print(pipeline.dump())
 
