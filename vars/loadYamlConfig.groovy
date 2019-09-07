@@ -11,6 +11,6 @@ def call(script, yamlFile){
 
   build = new YamlBuild(this, config)
 
-  build.initializeConfigKeys()
+  build.initializeBuild()
 
 }

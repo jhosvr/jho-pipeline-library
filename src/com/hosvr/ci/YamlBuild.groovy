@@ -19,8 +19,8 @@ class YamlBuild implements Serializable {
 		}
 	}
 
-	def initialize(){
-		
+	def initializeBuild(){
+
 		for (key in config.keySet()){
 			script.print(each)
 		}
