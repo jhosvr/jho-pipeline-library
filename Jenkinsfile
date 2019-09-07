@@ -6,5 +6,5 @@
 @Library('hosvr_pipeline_library') _
 
 node {  
-  loadYamlConfig('hosvr.yaml') 
+  loadYamlConfig('sample.yaml') 
 }
