@@ -7,10 +7,10 @@ import com.hosvr.ci.YamlBuild
 def call(script, yamlFile){
   checkout scm
 
-  def pipelineDefinition = readYaml(file: yamlFile)
+  def config = readYaml(file: yamlFile)
 
-  build = new YamlBuild(this, pipelineDefinition)
+  build = new YamlBuild(this, config)
 
-  build.start()
+  build.initializeConfigKeys()
 
 }
