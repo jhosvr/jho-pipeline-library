@@ -23,12 +23,17 @@ class PipelineYaml implements Serializable {
 
 	}
 
+
 	def start(){
-		//defineAgent()
-		//defineEnvironment()
-		//defineOptions()
+		defineAgent()
+		defineEnvironment()
+		defineOptions()
 		return True
 	}
 
+
+	def defineAgent(){ return True }
+	def defineEnvironment(){ return True }
+	def defineOptions(){ return True }
 
 }
