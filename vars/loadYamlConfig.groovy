@@ -10,5 +10,6 @@ def call(String yamlFile){
   print(pipeline.dump())
 
   build = new YamlBuild()
-  build.start()
+  print(build.dump())
+  // build.start()
 }
