@@ -11,6 +11,6 @@ def call(String yamlFile){
 
   build = new YamlBuild(this)
   print(build.dump())
-  // build.start()
+  build.start()
 }
 
