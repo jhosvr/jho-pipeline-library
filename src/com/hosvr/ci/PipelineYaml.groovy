@@ -24,8 +24,8 @@ class PipelineYaml implements Serializable {
 			script.print(key)
 		}
 
-		script.print(scmVars)
-		script.print(envVars)
+		script.print(scmVars.dump())
+		script.print(envVars.dump())
 	}
 
 }
