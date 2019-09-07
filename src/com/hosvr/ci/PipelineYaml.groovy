@@ -17,10 +17,12 @@ class PipelineYaml implements Serializable {
 
 	def initialize(){
 
-		for (key in config.keySet()){
-			print(key)
+		script.step{
+			for (key in config.keySet()){
+				print(key)
 			}
-			
+		}
+		
 	}
 
 }
