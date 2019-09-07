@@ -16,10 +16,9 @@ class PipelineYaml implements Serializable {
 
 
 	def initializeBuild(){
-		script{
-			
-			for (key in config.keySet()){
-				print(key)
+		
+		for (key in config.keySet()){
+			print(key)
 			}
 
 		}
