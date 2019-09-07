@@ -20,6 +20,7 @@ class PipelineYaml implements Serializable {
 		for (key in config.keySet()){
 			print(key)
 			}
-
-		}
+			
 	}
+
+}
