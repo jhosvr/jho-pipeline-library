@@ -2,7 +2,7 @@
   vars/loadYamlConfig.groovy
 */
 
-import com.hosvr.ci.*
+import com.hosvr.ci.YamlBuild
 
 def call(String yamlFile){
   checkout scm
