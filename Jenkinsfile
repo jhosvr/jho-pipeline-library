@@ -7,6 +7,6 @@
 
 node {
   stage('Load Definition') {
-    loadYamlConfig(script = this, yamlFile = 'sample.yaml')
+    loadYamlConfig(this, 'sample.yaml')
   }
 }

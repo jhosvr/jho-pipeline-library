@@ -4,13 +4,13 @@
 
 import com.hosvr.ci.YamlBuild
 
-def call(Script script, String yamlFile){
+def call(script, yamlFile){
   checkout scm
 
-  def pipelineDefinition = readYaml file: yamlFile
+  def pipelineDefinition = readYaml(file: yamlFile)
   print(pipelineDefinition.dump())
 
-  build = new YamlBuild(script = this, config = pipelineDefinition)
+  build = new YamlBuild(this, pipelineDefinition)
   print(build.dump())
 
   build.start()
