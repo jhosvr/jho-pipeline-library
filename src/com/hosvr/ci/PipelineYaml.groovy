@@ -7,12 +7,10 @@ package com.hosvr.ci
 class PipelineYaml implements Serializable {
 	def script
 	def config
-	def scmVars
 
-	def PipelineYaml(script, config, scmVars) {
+	def PipelineYaml(script, config) {
 		this.script = script
 		this.config = config
-		this.scmVars = scmVars
 	}
 
 
@@ -28,7 +26,6 @@ class PipelineYaml implements Serializable {
 		//defineAgent()
 		//defineEnvironment()
 		//defineOptions()
-
 		return True
 	}
 
