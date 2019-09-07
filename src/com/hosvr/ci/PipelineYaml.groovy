@@ -23,5 +23,3 @@ class PipelineYaml implements Serializable {
 
 		}
 	}
-
-}
