@@ -9,7 +9,7 @@ def call(script, yamlFile, envVars, scmVars){
   stage('Initialize'){
     checkout scm
 
-    environment = sh "printenv"
+    environment = sh(script: "printenv" returnStdout: true,).trim()
     print(environment.getClass())
     print(environment.dump())
     print(environment)
