@@ -16,7 +16,7 @@ def call(script, yamlFile, envVars){
   }
 
   stage('Print stuff'){
-    script.env
+    script.env.dump()
   }
 
 }
