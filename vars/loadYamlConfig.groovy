@@ -9,7 +9,7 @@ def call(String yamlFile){
   def pipeline = readYaml file: yamlFile
   print(pipeline.dump())
 
-  build = new YamlBuild()
+  build = new YamlBuild(this)
   print(build.dump())
   // build.start()
 }
