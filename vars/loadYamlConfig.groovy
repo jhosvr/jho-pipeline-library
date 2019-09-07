@@ -6,7 +6,7 @@ import com.hosvr.ci.PipelineYaml
 
 def call(script, yamlFile){
 
-  stage('Initialize Build'){]
+  stage('Initialize Build'){
     checkout scm
 
     def config = readYaml(file: yamlFile)
@@ -14,4 +14,5 @@ def call(script, yamlFile){
 
     build.initialize()
   }
+
 }
