@@ -6,7 +6,5 @@
 @Library('hosvr_pipeline_library@yaml-config') _
 
 node {
-  stage('Load Definition') {
-    loadYamlConfig(this, 'sample.yaml')
-  }
+  loadYamlConfig(this, 'sample.yaml')
 }
