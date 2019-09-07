@@ -1,30 +1,26 @@
 /*
-	src/com/hosvr/ci/YamlBuild.groovy
+	src/com/hosvr/ci/YamlDefinition.groovy
 */
 
 package com.hosvr.ci
 
-class YamlBuild implements Serializable {
+class YamlDefinition implements Serializable {
 	def script
 	def config
+
 
 	def YamlBuild(script, config) {
 		this.script = script
 		this.config = config
 	}
 
-	def start(){
-    for (directive in config){
-			script.print(directive)
-		}
-	}
 
 	def initializeBuild(){
-
-		for (key in config.keySet()){
-			script.print(key)
+		script{
+			for (key in config.keySet()){
+				print(key)
+			}
 		}
-
 	}
 
 }
