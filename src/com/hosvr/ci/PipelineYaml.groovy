@@ -1,15 +1,15 @@
 /*
-	src/com/hosvr/ci/YamlDefinition.groovy
+	src/com/hosvr/ci/PipelineYaml.groovy
 */
 
 package com.hosvr.ci
 
-class YamlDefinition implements Serializable {
+class PipelineYaml implements Serializable {
 	def script
 	def config
 
 
-	def YamlBuild(script, config) {
+	def PipelineYaml(script, config) {
 		this.script = script
 		this.config = config
 	}
@@ -17,9 +17,11 @@ class YamlDefinition implements Serializable {
 
 	def initializeBuild(){
 		script{
+			
 			for (key in config.keySet()){
 				print(key)
 			}
+
 		}
 	}
 
