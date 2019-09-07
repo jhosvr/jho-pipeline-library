@@ -9,7 +9,7 @@ class PipelineYaml implements Serializable {
 	def config
 	def scm
 
-	def PipelineYaml(script, config, scm) {
+	def PipelineYaml(script, config) {
 		this.script = script
 		this.config = config
 		this.scm = scm

@@ -12,7 +12,7 @@ def call(script, yamlFile){
     envString = sh(script: "printenv", returnStdout: true,).trim()
 
     def config = readYaml(file: yamlFile)
-    build = new PipelineYaml(this, config, this.scm)
+    build = new PipelineYaml(this, config)
 
     def options = build.initialize()
     print(options.dump())
