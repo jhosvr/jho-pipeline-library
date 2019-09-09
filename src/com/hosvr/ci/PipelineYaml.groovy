@@ -12,14 +12,12 @@ class PipelineYaml implements Serializable {
 	def PipelineYaml(script, config) {
 		this.script = script
 		this.config = config
-		this.scm = scm
 	}
 
 
 	def initialize(){
 
 		def keys = config.keySet() as List
-		script.print(scm.dump())
 		return keys
 
 	}
@@ -33,7 +31,12 @@ class PipelineYaml implements Serializable {
 	}
 
 
-	def defineAgent(){ return True }
+	def defineAgent(){
+		if (agent.label == null ) ||  (agent.label == "any") {
+			script.agent = any
+		}
+	}
+
 	def defineEnvironment(){ return True }
 	def defineOptions(){ return True }
 

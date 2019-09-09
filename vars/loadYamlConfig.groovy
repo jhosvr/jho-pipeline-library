@@ -15,12 +15,12 @@ def call(script, yamlFile){
     build = new PipelineYaml(this, config)
 
     def options = build.initialize()
-    print(options.dump())
+
+    build.defineAgent()
+
   }
 
   stage('Scm Vars'){
-    print("WITHIN THE SCM VARS STAGE")
-    print(scm.dump())
     // print(options.dump()) -> Out of scope from stage('Initialize').options
   }
 
