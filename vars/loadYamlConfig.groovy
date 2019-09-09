@@ -22,7 +22,7 @@ def call(script, yamlFile){
 
   stage('Scm Vars'){
     node("${build.config.agent.type}"){
-      sh "I made it!"
+      echo "NODE_NAM: ${env.NODE_NAME}"
     }
   }
 
