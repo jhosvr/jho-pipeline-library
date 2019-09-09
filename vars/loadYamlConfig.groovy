@@ -16,13 +16,16 @@ def call(script, yamlFile){
 
     def options = build.initialize()
 
-    build.defineAgent()
+    //build.defineAgent()
 
   }
 
   stage('Scm Vars'){
+    build.inAgent({
+      echo "Scm Vars stage"
+    })
     // print(options.dump()) -> Out of scope from stage('Initialize').options
-    echo "Scm Vars stage"
+    
   }
 
 }
