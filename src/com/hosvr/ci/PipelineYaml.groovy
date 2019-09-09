@@ -23,22 +23,12 @@ class PipelineYaml implements Serializable {
 	}
 
 
-	def start(){
-		defineAgent()
-		defineEnvironment()
-		defineOptions()
-		return True
-	}
-
-
 	def inAgent(steps){
 		if (config.agent.type == null || config.agent.type == "any") {
-			agent any
-			node {	steps }
+			node(label: 'top') {	
+				steps }
 		}
 	}
 
-	def defineEnvironment(){ return True }
-	def defineOptions(){ return True }
 
 }

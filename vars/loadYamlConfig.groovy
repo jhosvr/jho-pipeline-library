@@ -24,8 +24,6 @@ def call(script, yamlFile){
     build.inAgent({
       echo "Scm Vars stage"
     })
-    // print(options.dump()) -> Out of scope from stage('Initialize').options
-    
   }
 
 }
