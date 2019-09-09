@@ -32,7 +32,7 @@ class PipelineYaml implements Serializable {
 
 
 	def defineAgent(){
-		if (agent.label == null ) ||  (agent.label == "any") {
+		if (agent.label == null || agent.label == "any") {
 			script.agent = any
 		}
 	}
