@@ -22,6 +22,7 @@ def call(script, yamlFile){
 
   stage('Scm Vars'){
     // print(options.dump()) -> Out of scope from stage('Initialize').options
+    echo "Scm Vars stage"
   }
 
 }
