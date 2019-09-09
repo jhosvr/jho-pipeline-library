@@ -23,10 +23,9 @@ class PipelineYaml implements Serializable {
 	}
 
 
-	def inAgent(steps){
+	def defineAgent(){
 		if (config.agent.type == null || config.agent.type == "any") {
-			node(label: 'top') {	
-				steps }
+			config.agent.type = "top"
 		}
 	}
 

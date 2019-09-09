@@ -16,14 +16,14 @@ def call(script, yamlFile){
 
     def options = build.initialize()
 
-    //build.defineAgent()
+    build.defineAgent()
 
   }
 
   stage('Scm Vars'){
-    build.inAgent({
-      echo "Scm Vars stage"
-    })
+    node("${build.config.agent.type}"){
+      sh "I made it!"
+    }
   }
 
 }
