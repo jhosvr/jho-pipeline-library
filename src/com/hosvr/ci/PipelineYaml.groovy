@@ -27,6 +27,8 @@ class PipelineYaml implements Serializable {
 		if (config.agent.type == null || config.agent.type == "any") {
 			config.agent.type = "top"
 		}
+
+		sh "Agent config.agent.type has been defined as: ${config.agent.type}"
 	}
 
 
